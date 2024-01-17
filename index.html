@@ -6,6 +6,26 @@
     <title>Document</title>
 </head>
 <body>
+    <form action="/my-handling-form-page" method="post">
+        <ul>
+          <li>
+            <label for="first_name">First name:</label>
+            <input type="name" id="first_name"/>
+          </li>
+          <li>
+            <label for="last_name">Last name:</label>
+            <input type="name" id="last_name"/>
+          </li>
+          <li>
+            <label for="birth">Birth:</label>
+            <input type="number" id="birth"/>
+          </li>
+          <li class="button">
+            <button type="submit" onclick="addpainter()">Submit</button>
+          </li>
+          
+        </ul>
+      </form>
     
 </body>
 <script src="./script.js"></script>

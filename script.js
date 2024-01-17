@@ -22,6 +22,7 @@ console.log(Painter1);
 console.log(Picture1); */
 
 
+
 class Painter {
     constructor(first_name, last_name, birth) {
         this.first_name = first_name;
@@ -50,9 +51,11 @@ class Picture {
         if (this.author === undefined) {
             return `Painting: ${this.name}`;
         }
-        return `Painting: ${this.name}; Price: ${this.price}milion; Year of creation: ${this.year}; Author: ${this.author.getAuthor()};`;
+        return `Painting: ${this.name}; Price: ${this.price} milion; Year of creation: ${this.year}; Author: ${this.author.getAuthor()};`;
     }
 }
+
+const painters = new Painter();
 
 let davinci = new Painter("Leonardo", "Vinci", 1452);
 let diCaprio = new Painter("Leonardo", "DiCaprio", 1974);
@@ -63,3 +66,12 @@ let titanic = new Picture(diCaprio,"Titanic",200,1998);
 let lakehouse = new Picture(adolf, "House at a lake with mountains",5,1910);
 console.log(davinci);
 console.log(mona.getPainting());
+
+function addpainter(){
+    let first_name = document.getElementById("first_name").value;
+    let last_name = document.getElementById("last_name").value;
+    let birth = document.getElementById("birth").value;
+    let newpainter = new Painter(first_name,last_name,birth);
+    console.log(newpainter);
+    event.preventDefault();
+}
