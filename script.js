@@ -35,7 +35,7 @@ class Painter {
     }
 
     getAuthor() {
-        return `Name of autor: ${this.first_name}; Last name of autor: ${this.last_name}; Birth: ${this.birth};`
+        return `Name of autor: ${this.first_name}; Last name of autor: ${this.last_name}; Birth: ${this.birth}`;
     }
 }
 
@@ -55,7 +55,7 @@ class Picture {
     }
 }
 
-const painters = new Painter();
+const listpainters = [];
 
 let davinci = new Painter("Leonardo", "Vinci", 1452);
 let diCaprio = new Painter("Leonardo", "DiCaprio", 1974);
@@ -73,5 +73,14 @@ function addpainter(){
     let birth = document.getElementById("birth").value;
     let newpainter = new Painter(first_name,last_name,birth);
     console.log(newpainter);
+    event.preventDefault();
+}
+
+function addpainting(){
+    let name = document.getElementById("name").value;
+    let price = document.getElementById("price").value;
+    let year = document.getElementById("year").value;
+    let newpainting = new Picture(adolf,name,price,year);
+    console.log(newpainting);
     event.preventDefault();
 }
